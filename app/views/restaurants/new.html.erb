@@ -1,0 +1,19 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-4">
+    <h4 class="text-center mb-5">👩‍🍳 New Restaurant</h4>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-4">
+    <%= simple_form_for @restaurant do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :phone_number %>
+      <%= f.input :category, collection: Restaurant::CATEGORIES %>
+      <div class="d-flex" style="gap: 16px;">
+        <%= link_to "Cancel", restaurants_path, class: "btn btn-outline-secondary w-100 mt-4" %>
+        <%= f.button :submit, { class: "btn btn-primary w-100 mt-4" } %>
+      </div>
+    <% end %>
+  </div>
+</div>
