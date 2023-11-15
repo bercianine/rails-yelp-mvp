@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'restaurants/new', to: 'restaurants#new'
   post 'restaurants', to: 'restaurants#create'
   get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
-  get 'restaurants/:id/reviews/new', to: 'reviews#new'
+  get 'restaurants/:id/reviews/new', to: 'reviews#new', as: :review_new
 
   resources :restaurants do
     resources :reviews

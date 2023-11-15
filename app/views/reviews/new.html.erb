@@ -1,2 +1,17 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-4">
+    <h4 class="text-center mb-5">👩‍🍳 New Restaurant</h4>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-4">
+    <%= simple_form_for @restaurant do |f| %>
+      <%= f.input :rating %>
+      <%= f.input :content %>
+      <div class="d-flex" style="gap: 16px;">
+        <%= link_to "Cancel", restaurant_path, class: "btn btn-outline-secondary w-100 mt-4" %>
+        <%= f.button :submit, { class: "btn btn-primary w-100 mt-4" } %>
+      </div>
+    <% end %>
+  </div>
+</div>
