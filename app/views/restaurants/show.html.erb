@@ -1,5 +1,5 @@
 <div class="row justify-content-center d-flex" style="gap: 16px;">
-      <div class="card pt-2" style="width: 48rem;">
+      <div class="card pt-2" style="width: 48rem; margin-bottom: 40px;">
         <div class="card-body">
           <%= link_to "〱 Back to all restaurants", restaurants_path, class: "card-text text-secondary" %>
           <h3 class="card-title mb-4 mt-4"><%= @restaurant.name %></h3>
@@ -20,7 +20,7 @@
             <%= link_to "Add a review", review_new_path(restaurant_id: @restaurant.id), class: "btn btn-primary" %>
           </div>
           <% @reviews.each do |review| %>
-            <div class="card pt-2 w-100">
+            <div class="card pt-2 w-100 mb-3">
               <div class="card-body d-flex" style="gap: 40px;">
                 <div class="d-flex" style="gap: 8px;">
                   <p class="card-text text-secondary"><i>Rating:</i></p>
